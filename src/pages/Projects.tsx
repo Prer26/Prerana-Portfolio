@@ -1,175 +1,280 @@
-import { ExternalLink, Github } from "lucide-react";
+import { useState, useEffect } from "react";
+import { X, Github } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
 import { SectionHeading } from "@/components/SectionHeading";
-import { Button } from "@/components/ui/button";
+
+/* ================= TAG COLORS ================= */
+
+const tagColors: Record<string, string> = {
+  "Power BI": "bg-yellow-100 text-yellow-800",
+  "Tableau": "bg-blue-100 text-blue-800",
+  "Excel": "bg-green-100 text-green-800",
+  "DAX": "bg-purple-100 text-purple-800",
+  "Sales Analytics": "bg-indigo-100 text-indigo-800",
+  "HR Analytics": "bg-pink-100 text-pink-800",
+  "Pivot Tables": "bg-emerald-100 text-emerald-800",
+  "Deep Learning": "bg-red-100 text-red-800",
+  "CNN": "bg-orange-100 text-orange-800",
+  "TensorFlow": "bg-amber-100 text-amber-800",
+  "MERN": "bg-teal-100 text-teal-800",
+  "MongoDB": "bg-green-100 text-green-800",
+  "React": "bg-cyan-100 text-cyan-800",
+  "Web Development": "bg-sky-100 text-sky-800",
+  "UI/UX": "bg-fuchsia-100 text-fuchsia-800",
+};
+
+/* ================= DATA ================= */
 
 const projects = [
-  // ================= DASHBOARDS =================
+  // DASHBOARDS
   {
-    title: "BlinkIt & Netflix Analytics Dashboards",
+    category: "Dashboards",
+    title: "BlinkIt Analytics Dashboard",
     description:
-      "Interactive Power BI dashboards analyzing product performance and viewer preferences to support data-driven business decisions.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      "Interactive Power BI dashboard analysing product performance and customer demand patterns.",
+    image: "/projects/dashboards/blinkitt.jpg",
     tags: ["Power BI", "DAX", "Data Visualization"],
-    liveUrl: "#",
-    repoUrl: "#",
+    github: "https://github.com/yourusername/blinkit-dashboard",
   },
   {
-    title: "Global Population Analysis",
+    category: "Dashboards",
+    title: "HR Sales Analysis",
     description:
-      "Analysed population trends across 200+ countries over 50 years using interactive KPIs and drill-through features.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    tags: ["Power BI", "Tableau", "Analytics"],
-    liveUrl: "#",
-    repoUrl: "#",
+      "Analysed employee performance, attrition, and workforce trends using interactive KPIs and drill-through insights.",
+    image: "/projects/dashboards/hrr.png",
+    tags: ["Power BI", "HR Analytics"],
+    github: "https://github.com/yourusername/hr-sales-analysis",
   },
   {
-    title: "EV Vehicles Sales Analysis",
+    category: "Dashboards",
+    title: "EV Vehicle Sales Analysis",
     description:
       "Studied EV sales and adoption trends to identify regions driving electric vehicle demand.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
-    tags: ["Tableau", "Power BI", "Data Analysis"],
-    liveUrl: "#",
-    repoUrl: "#",
+    image: "/projects/dashboards/ev_vehicle.jpg",
+    tags: ["Tableau", "Sales Analytics"],
+    github: "https://github.com/yourusername/ev-sales",
+  },
+  {
+    category: "Dashboards",
+    title: "Sales Dashboard",
+    description:
+      "Interactive dashboard visualizing sales performance metrics and KPIs.",
+    image: "/projects/dashboards/excel.jpg",
+    tags: ["Excel", "Sales Analytics", "Pivot Tables"],
+    github: "https://github.com/yourusername/sales-dashboard",
+  },
+  {
+    category: "Dashboards",
+    title: "Crime Safety Analysis Dashboard",
+    description:"Interactive dashboard analyzing crime patterns and safety metrics.",
+    image: "/projects/dashboards/crimee.jpg",
+    tags: ["Power BI", "Data Visualization"],
+    github: "https://github.com/yourusername/sales-dashboards"
   },
 
-  // ================= ML / DL =================
+  // ML
   {
-    title: "Cardiovascular Disease Detection",
-    description:
-      "Machine learning classification model achieving 87% accuracy for predicting cardiovascular disease.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop",
-    tags: ["Python", "Machine Learning", "Classification"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    title: "Diabetes Prediction System",
-    description:
-      "Improved model accuracy from 76% to 88% through EDA and hyperparameter tuning.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
-    tags: ["Python", "Scikit-learn", "EDA"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    title: "IPL Score Predictor",
-    description:
-      "Regression-based ML model achieving 85% prediction accuracy using historical match data.",
-    image: "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=600&h=400&fit=crop",
-    tags: ["Machine Learning", "Regression", "Python"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    title: "Spotify Dataset Analysis",
-    description:
-      "Analysed 10,000+ tracks to uncover listening patterns and user preferences.",
-    image: "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?w=600&h=400&fit=crop",
-    tags: ["Python", "Data Analysis", "ML"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
+    category: "ML",
     title: "Blood Cancer Detection (CNN)",
     description:
-      "Deep learning CNN model with 92% accuracy, including a frontend UI for image-based predictions.",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
+      "Deep learning CNN model achieving 92% accuracy for blood cancer detection using medical image data.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsIk_FjS-23wqiKHH0-eQLl79Y_Vr9h_n8AQ&s",
     tags: ["Deep Learning", "CNN", "TensorFlow"],
-    liveUrl: "#",
-    repoUrl: "#",
+    github: "https://github.com/yourusername/blood-cancer-cnn",
   },
 
-  // ================= WEB =================
+  // WEB
   {
+    category: "Web",
     title: "NishkaamKrishi – MERN Platform",
     description:
-      "Full-stack MERN platform for sustainable farming, integrating crop details and farmer resources.",
-    image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=600&h=400&fit=crop",
-    tags: ["MERN", "MongoDB", "React", "Node.js"],
-    liveUrl: "#",
-    repoUrl: "#",
+      "Full-stack MERN platform designed for sustainable farming and farmer resources.",
+    image: "/projects/web/nishkaam.jpeg",
+    tags: ["MERN", "MongoDB", "React"],
+    github: "https://github.com/yourusername/nishkaamkrishi",
   },
   {
+    category: "Web",
     title: "Catering Services Website",
     description:
-      "Responsive MERN-stack website for catering services, locally deployed.",
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
-    tags: ["MERN", "Web Development", "UI"],
-    liveUrl: "#",
-    repoUrl: "#",
+      "Responsive website designed for catering services with clean UI and layout.",
+    image: "/projects/web/shree.png",
+    tags: ["Web Development", "UI/UX"],
+    github: "https://github.com/yourusername/catering-website",
+  },
+
+  // CANVA
+  {
+    category: "Canva",
+    title: "Food & Café Creatives",
+    description: "Canva-based promotional designs created for food and café branding.",
+    image: "/projects/canva/coffe.jpg",
+  },
+  {
+    category: "Canva",
+    title: "Brand Posters & Flyers",
+    description: "Marketing posters and flyers designed using Canva.",
+    image: "/projects/canva/burgerr.png",
+  },
+  {
+    category: "Canva",
+    title: "Event & Personal Branding Designs",
+    description: "Visual creatives designed for events and personal branding.",
+    image: "/projects/canva/catering.png",
+  },
+  {
+    category: "Canva",
+    title: "My Personal Design",
+    description: "Creative personal designs made using Canva.",
+    image: "/projects/canva/version.png",
+  },
+  {
+    category: "Canva",
+    title: "Data-Themed Design",
+    description: "Creative data-themed visual design.",
+    image: "/projects/canva/DATA.png",
+  },
+  {
+    category: "Canva",
+    title: "T-Shirt Design",
+    description: "Creative T-shirt design concepts made using Canva.",
+    image: "/projects/canva/t-shirtt.png",
   },
 ];
 
+/* ================= COMPONENT ================= */
+
+const categories = ["All", "Dashboards", "ML", "Web", "Canva"];
+
 const Projects = () => {
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  useEffect(() => {
+    document.body.style.overflow = activeImage ? "hidden" : "auto";
+  }, [activeImage]);
+
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
+
   return (
     <PageWrapper>
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-6 lg:px-8">
+
           <SectionHeading
-            title="Projects"
-            subtitle="Real work across data analytics, machine learning, and full-stack development"
+            title="Projects & Work"
+            subtitle="Data analytics, machine learning, web development, and creative designs"
           />
 
+          {/* FILTERS */}
+          <div className="flex flex-wrap gap-3 mb-12">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 rounded-full text-sm transition
+                  ${
+                    activeCategory === cat
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-secondary text-secondary-foreground hover:bg-secondary/70"
+                  }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* GRID */}
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <article
                 key={project.title}
-                className="group card-elevated overflow-hidden opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.12}s` }}
+                onClick={() => setActiveImage(project.image)}
+                tabIndex={0}
+                onKeyDown={(e) => e.key === "Enter" && setActiveImage(project.image)}
+                className="group card-elevated overflow-hidden cursor-zoom-in opacity-0 animate-fade-in-up focus:outline-none"
+                style={{ animationDelay: `${index * 0.08}s` }}
               >
-                {/* Image */}
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition" />
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <h3 className="font-serif text-xl font-semibold mb-3">
                     {project.title}
                   </h3>
+
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  {project.tags && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag: string) => (
+                        <span
+                          key={tag}
+                          className={`px-3 py-1 text-xs font-medium rounded-full
+                            ${tagColors[tag] ?? "bg-secondary text-secondary-foreground"}`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
-                  {/* Actions */}
-                  <div className="flex gap-3">
-                    <Button variant="gradient" size="sm" asChild>
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-1" />
-                        Live
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-1" />
-                        Code
-                      </a>
-                    </Button>
-                  </div>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                    >
+                      <Github size={16} />
+                      View on GitHub
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
           </div>
         </div>
       </section>
+
+      {/* IMAGE MODAL */}
+      {activeImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center px-4"
+          onClick={() => setActiveImage(null)}
+        >
+          <div
+            className="relative max-w-6xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setActiveImage(null)}
+              className="absolute -top-10 right-0 text-white"
+            >
+              <X size={28} />
+            </button>
+
+            <img
+              src={activeImage}
+              alt="Project preview"
+              className="w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
     </PageWrapper>
   );
 };
