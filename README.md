@@ -1,73 +1,126 @@
-# Welcome to your Lovable project
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/977ec0a0-047a-42c8-ac23-1e24de3d7ee1"
+    alt="Portfolio Preview"
+    width="392"
+    height="464"
+  />
+</p>
 
-## Project info
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+# 🌸 Prerana Portfolio
 
-## How can I edit this code?
+A modern, responsive personal portfolio showcasing my work across **Data Analytics, Machine Learning, Web Development, and Creative Design**.
 
-There are several ways of editing your application.
+Built to reflect my learning journey, hands-on projects, and passion for turning data, ideas, and creativity into meaningful digital experiences.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 👩‍💻 About Me
 
-Changes made via Lovable will be committed automatically to this repo.
+I’m **Prerana**, a 3rd-year BE student exploring the intersection of **Data Science, Artificial Intelligence, and Web Technologies**.  
+I enjoy analyzing data, building dashboards, developing ML models, and designing clean, user-friendly interfaces.
 
-**Use your preferred IDE**
+This portfolio highlights:
+- Real-world analytical projects
+- Practical machine learning implementations
+- Full-stack and frontend development
+- Creative designs made using Canva
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Live Portfolio
 
-Follow these steps:
+🔗 **Website:**  
+https://prerana-portfolio-six.vercel.app
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧩 What’s Inside
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 📊 Data Analytics & Dashboards
+- Power BI dashboards (BlinkIt, HR Analytics, EV Sales)
+- Excel-based sales analysis
+- KPI-driven insights and visual storytelling
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 🤖 Machine Learning & AI
+- Blood Cancer Detection using CNN
+- Data preprocessing, training, and evaluation
+- Accuracy-focused experimentation
 
-**Edit a file directly in GitHub**
+### 🌐 Web Development
+- MERN-based platforms
+- Responsive and accessible UI designs
+- Component-driven architecture
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🎨 Creative Designs (Canva)
+- Posters & flyers
+- Branding creatives
+- Event and personal designs
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🛠️ Tech Stack
 
-## What technologies are used for this project?
-
-This project is built with:
-
+**Frontend**
+- React + TypeScript
 - Vite
-- TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+**Data & Machine Learning**
+- Python
+- Power BI
+- Tableau
+- Excel
+- TensorFlow
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+**Tools**
+- Git & GitHub
+- Canva
+- VS Code
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🌟 Features
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Fully responsive (mobile & desktop)
+- Clean UI with subtle animations
+- Category-based project filtering
+- Image preview modals
+- Copy-to-clipboard email feature
+- Friendly robot assistant on the contact page 🤖
+
+---
+
+## 📬 Contact
+
+- 📧 **Email:** preranaiyengar26@gmail.com  
+- 💼 **LinkedIn:** https://linkedin.com/in/prerana-26b489295  
+- 🧑‍💻 **GitHub:** https://github.com/Prer26  
+
+📍 *Open to internships, freelance, and remote opportunities worldwide.*
+
+---
+
+## 📌 Future Enhancements
+
+- Blog & case study section
+- Project walkthroughs
+- Advanced ML visual demos
+- Performance optimizations
+
+---
+
+## 🙌 Thank You
+
+Thanks for taking the time to explore my portfolio.  
+If you’d like to collaborate or discuss opportunities, feel free to reach out anytime 🙂
+
+---
+
+⭐ If you like the projects, consider starring the repository!
+
+
+
