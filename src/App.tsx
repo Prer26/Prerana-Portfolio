@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ScrollToTop from "@/components/ScrollToTop";
+import WalkingRobot from "@/components/WalkingRobot"; // 🤖 NEW
 
 import Entry from "./pages/Entry";
 import Home from "./pages/Home";
@@ -15,18 +16,23 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+/* ================= QUERY CLIENT ================= */
 const queryClient = new QueryClient();
 
+/* ================= APP ================= */
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+    <TooltipProvider delayDuration={100}>
+      {/* Toasts */}
       <Toaster />
       <Sonner />
 
+      {/* Router */}
       <BrowserRouter>
-        {/* 👇 THIS FIXES THE SCROLL ISSUE */}
+        {/* Fix scroll on route change */}
         <ScrollToTop />
 
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<Entry />} />
           <Route path="/home" element={<Home />} />
@@ -37,6 +43,9 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+
+        {/* 🤖 GLOBAL WALKING ROBOT */}
+        <WalkingRobot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

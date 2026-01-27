@@ -38,7 +38,7 @@ const dataSkills = [
   },
   {
     name: "SQL",
-    level: "Basics",
+    level: "Intermediate",
     icon: "🗃️",
     points: [
       "CRUD operations",
@@ -183,6 +183,16 @@ const toolSkills = [
       "Loops, pointers, conditionals",
       "Logic building",
       "Strong programming fundamentals",
+    ],
+  },
+  {
+    name: "Git & GitHub",
+    level: "Intermediate",
+    icon: "🔧",
+    points: [
+      "Version control basics",
+      "Branching & merging",
+      "Collaborative workflows",
     ],
   },
   {
