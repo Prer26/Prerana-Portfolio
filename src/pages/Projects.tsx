@@ -66,10 +66,35 @@ const projects = [
   {
     category: "Dashboards",
     title: "Crime Safety Analysis Dashboard",
-    description:"Interactive dashboard analyzing crime patterns and safety metrics.",
+    description: "Interactive dashboard analyzing crime patterns and safety metrics.",
     image: "/projects/dashboards/crimee.jpg",
     tags: ["Power BI", "Data Visualization"],
     github: "https://github.com/yourusername/sales-dashboards"
+  },
+  {
+    category: "Dashboards",
+    title: "Swiggy Dataset analysis Dashboard",
+    description: "Excel-based analytics dashboard built using Pivot Tables, Power Query, and advanced formulas to analyze Swiggy order trends, restaurant performance, delivery time, and revenue patterns for data-driven insights.",
+    image: "/projects/dashboards/swiggy.png",
+    tags: ["Excel", "Sales Analytics", "Pivot Tables"],
+    github: "https://github.com/yourusername/swiggy-dashboard",
+  },
+  {
+    category: "Dashboards",
+    title: "Pizza Dataset Analysis Dashboard",
+    description:
+      "Interactive Power BI dashboard analyzing pizza sales performance, peak order hours, top categories, revenue trends, and customer purchase behavior using DAX measures and dynamic slicers.",
+    image: "/projects/dashboards/pizza.png",
+    tags: ["Power BI", "DAX", "Sales Analytics"],
+    github: "https://github.com/yourusername/pizza-powerbi",
+  },
+  {
+    category: "Dashboards",
+    title: "Social Media Addiction Analysis",
+    description: "Power BI analytics dashboard studying screen time, platform usage, age-wise addiction patterns, productivity impact, and mental health indicators with interactive KPIs and drill-through insights.",
+    image: "/projects/dashboards/social media.png",
+    tags: ["Power BI", "Data Visualization"],
+    github: "https://github.com/yourusername/social-addiction-powerbi",
   },
 
   // ML
@@ -177,10 +202,9 @@ const Projects = () => {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm transition
-                  ${
-                    activeCategory === cat
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/70"
+                  ${activeCategory === cat
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/70"
                   }`}
               >
                 {cat}
