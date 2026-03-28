@@ -96,6 +96,14 @@ const projects = [
     tags: ["Power BI", "Data Visualization"],
     github: "https://github.com/yourusername/social-addiction-powerbi",
   },
+  {
+    category: "Dashboards",
+    title: "SuperStore Analysis Dashboard",
+    description: "Power BI dashboard analyzing SuperStore sales performance, customer segments, product categories, and regional trends using DAX measures and interactive visuals.",
+    image: "/projects/dashboards/superstore.png",
+    tags: ["Power BI", "DAX", "Sales Analytics"],
+    github: "https://github.com/yourusername/superstore-powerbi",
+  },
 
   // ML
   {
@@ -128,8 +136,26 @@ const projects = [
     tags: ["Web Development", "UI/UX"],
     github: "https://github.com/yourusername/catering-website",
   },
+  {
+    category: "Web",
+    title:"Pharma Guard AI – Drug Interaction Checker",
+    description:
+      "AI-powered web app built with React and Flask that checks for drug interactions and provides safety information to users.",
+    image: "/projects/web/Pharmaguard.png",
+    tags: ["Web Development", "React", "AI"],
+    github: "https://github.com/Prer26/PharmaGuard-AI"
+  },
+  {
+    category: "Web",
+    title:"TravelMate – AI-Powered Travel Planner",
+    description:
+      "AI-powered travel planning web app built with React and Node.js that generates personalized itineraries based on user preferences and destination insights.",
+    image: "/projects/web/Travel.png",
+    tags: ["Web Development", "React", "AI"],
+    github: "https://github.com/Prer26/TravelMateAI"
+  },
 
-  // CANVA
+  // CANVA  
   {
     category: "Canva",
     title: "Food & Café Creatives",
