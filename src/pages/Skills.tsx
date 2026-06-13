@@ -38,7 +38,7 @@ const dataSkills = [
   },
   {
     name: "SQL",
-    level: "Intermediate",
+    level: "Advanced",
     icon: "🗃️",
     points: [
       "CRUD operations",
@@ -136,6 +136,22 @@ const pythonLibraries = [
       "Model tuning basics",
     ],
   },
+  {
+    name: "TensorFlow",
+    points: [
+      "Deep learning model building",
+      "Neural network architectures",
+      "Training and evaluation",
+    ],
+  },
+  {
+    name: "PyTorch",
+    points: [
+      "Dynamic computation graphs",
+      "Neural network training",
+      "Model deployment basics",
+    ],
+  },
 ];
 
 /* ================= WEB ================= */
@@ -169,6 +185,36 @@ const webSkills = [
       "Schema design",
       "Queries and aggregation",
       "Backend & ML project storage",
+    ],
+  },
+  {
+    name: "Node.js",
+    level: "Intermediate",
+    icon: "🟢",
+    points: [
+      "Server-side JavaScript",
+      "Building REST APIs",
+      "Connecting to databases",
+    ],
+  },
+  {
+    name: "React",
+    level: "Intermediate",
+    icon: "⚛️",
+    points: [
+      "Component-based architecture",
+      "State management with hooks",
+      "Building interactive UIs",
+    ],
+  },
+  {
+    name: "Angular",
+    level: "Intermediate",
+    icon: "🅰️",
+    points: [
+      "Component-based architecture",
+      "Two-way data binding",
+      "Building dynamic web apps",
     ],
   },
 ];
@@ -294,6 +340,59 @@ const Skills = () => {
             title="Skills & Tools"
             subtitle="What I know, how I use it, and how I think"
           />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+
+  <div className="card-elevated p-5 text-center">
+    <h3 className="text-3xl font-bold gradient-text">15+</h3>
+    <p className="text-sm">Technologies</p>
+  </div>
+
+  <div className="card-elevated p-5 text-center">
+    <h3 className="text-3xl font-bold gradient-text">10+</h3>
+    <p className="text-sm">Projects</p>
+  </div>
+
+  <div className="card-elevated p-5 text-center">
+    <h3 className="text-3xl font-bold gradient-text">AI</h3>
+    <p className="text-sm">Focused</p>
+  </div>
+
+  <div className="card-elevated p-5 text-center">
+    <h3 className="text-3xl font-bold gradient-text">3</h3>
+    <p className="text-sm">Internships</p>
+  </div>
+
+</div>
+<div className="mb-20">
+
+<h2 className="font-serif text-3xl font-bold text-center mb-10">
+Core Expertise
+</h2>
+
+<div className="grid md:grid-cols-4 gap-6">
+
+<div className="card-elevated p-6 text-center">
+🤖
+AI & ML
+</div>
+
+<div className="card-elevated p-6 text-center">
+📊
+Data Analytics
+</div>
+
+<div className="card-elevated p-6 text-center">
+💻
+Full Stack
+</div>
+
+<div className="card-elevated p-6 text-center">
+💾
+MySQL
+</div>
+
+</div>
+</div>
 
           <h2 className="font-serif text-2xl font-semibold mb-6">
             Data Analytics
@@ -331,7 +430,7 @@ const Skills = () => {
               ))}
             </ul>
           </div>
-
+          
           {/* REFLECTIONS */}
           <div className="mt-28 max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold mb-10 text-center">

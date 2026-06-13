@@ -7,6 +7,7 @@ const navLinks = [
   { name: "Skills", path: "/skills" },
   { name: "Projects", path: "/projects" },
   { name: "Experience", path: "/experience" },
+  {name: "Achievements", path: "/achievements" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -21,7 +22,7 @@ export function Navigation() {
             to="/home" 
             className="font-serif text-xl lg:text-2xl font-semibold text-foreground hover:text-primary transition-colors"
           >
-            Portfolio
+            Prerana Iyengar
           </Link>
           
           <div className="hidden md:flex items-center gap-1 lg:gap-2">

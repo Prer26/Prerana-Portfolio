@@ -86,7 +86,7 @@ const projects = [
       "Interactive Power BI dashboard analyzing pizza sales performance, peak order hours, top categories, revenue trends, and customer purchase behavior using DAX measures and dynamic slicers.",
     image: "/projects/dashboards/pizza.png",
     tags: ["Power BI", "DAX", "Sales Analytics"],
-    github: "https://github.com/yourusername/pizza-powerbi",
+    github: "https://github.com/Prer26/Pizza-sales-data-analysis",
   },
   {
     category: "Dashboards",
@@ -94,7 +94,15 @@ const projects = [
     description: "Power BI analytics dashboard studying screen time, platform usage, age-wise addiction patterns, productivity impact, and mental health indicators with interactive KPIs and drill-through insights.",
     image: "/projects/dashboards/social media.png",
     tags: ["Power BI", "Data Visualization"],
-    github: "https://github.com/yourusername/social-addiction-powerbi",
+    github: "https://github.com/Prer26/Social-Media-Addiction-Analysis",
+  },
+  {
+    category: "Dashboards",
+    title: "AgriInsights – Agriculture Data Dashboard",
+    description: "Power BI dashboard analyzing crop yields, weather patterns, soil health, and market trends to provide actionable insights for farmers and agribusinesses.",
+    image: "/projects/dashboards/agri.png",
+    tags: ["Power BI", "Data Visualization"],
+    github: "https://github.com/Prer26/Agri-Insights-Dashboard",
   },
   {
     category: "Dashboards",
@@ -123,9 +131,9 @@ const projects = [
     title: "NishkaamKrishi – MERN Platform",
     description:
       "Full-stack MERN platform designed for sustainable farming and farmer resources.",
-    image: "/projects/web/nishkaam.jpeg",
+    image: "/projects/web/nishkaam.png",
     tags: ["MERN", "MongoDB", "React"],
-    github: "https://github.com/yourusername/nishkaamkrishi",
+    github: "https://github.com/Prer26/nishkaam-krishi-ai",
   },
   {
     category: "Web",
@@ -154,7 +162,15 @@ const projects = [
     tags: ["Web Development", "React", "AI"],
     github: "https://github.com/Prer26/TravelMateAI"
   },
-
+{
+    category: "Web",
+    title:"Nyayastra AI-Powered Legal Assistant",
+    description:
+      "AI-powered legal assistant web app built with React and Flask that provides legal information, case summaries, and document analysis for users.",
+    image: "/projects/web/nyayastra.png",
+    tags: ["Web Development", "React", "AI"],
+    github: "https://github.com/Prer26/Nyayastra-Frontend"
+  },
   // CANVA  
   {
     category: "Canva",

@@ -2,130 +2,252 @@ import { PageWrapper } from "@/components/PageWrapper";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SocialLinks } from "@/components/SocialLinks";
 
-const About = () => {
+import SpeakerEventImg from "../assets/reactplay-speaker.jpeg";
+import TeachingImg from "../assets/teaching-photo.jpeg";
+import TeachinggImg from "../assets/teaching-sessions.jpeg";
+import CodingImg from "../assets/coding-work.jpeg";
+
+const timeline = [
+  {
+    year: "2023",
+    title: "Started AIML Journey",
+    desc: "Began my Artificial Intelligence & Machine Learning degree and discovered my passion for intelligent systems.",
+  },
+  {
+    year: "2024",
+    title: "Machine Learning Exploration",
+    desc: "Built predictive models, explored Deep Learning and strengthened my AI foundations.",
+  },
+  {
+    year: "2025",
+    title: "Projects & Internships",
+    desc: "Worked on AI, Data Science and Full Stack projects solving real-world challenges.",
+  },
+  {
+    year: "2026",
+    title: "Google Gemini Ambassador & Community Speaker",
+    desc: "Sharing knowledge, mentoring students and contributing to developer communities.",
+  },
+];
+
+export default function About() {
   return (
     <PageWrapper>
       <section className="py-16 lg:py-24">
+        <div className="container mx-auto px-5">
 
-        {/* ================= HEADER ================= */}
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8 text-center">
           <SectionHeading
             title="About Me"
-            subtitle="As I explored data, I realized AI and Machine Learning were the bridge between information and intelligence."
+            subtitle="The story behind my journey into Artificial Intelligence, Data Science and Technology."
             centered
           />
-        </div>
 
-        {/* ================= CONTENT ================= */}
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8 mt-16">
-          <div className="w-full max-w-3xl mx-auto space-y-14 lg:space-y-20 text-center">
+          <div className="max-w-6xl mx-auto mt-20">
 
-            {/* WHO I AM */}
-            <div className="opacity-0 animate-fade-in-up space-y-4">
-              <h3 className="font-serif text-[26px] sm:text-[28px] font-medium tracking-tight text-foreground">
-                Who I Am
-              </h3>
+            <div className="text-center mb-24">
+              <div className="inline-flex px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                🚀 AI Engineer • Data Scientist • Developer
+              </div>
 
-              <div className="w-8 h-[1.5px] bg-primary/80 mx-auto" />
+              <h1 className="font-serif text-4xl md:text-6xl font-bold mb-8">
+                I Don't Just Build Models.
+                <br />
+                I Build Intelligent Solutions.
+              </h1>
 
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground/90">
-                I’m a 3rd-year BE student in the Department of Artificial
-                Intelligence and Machine Learning at RajaRajeswari College of
-                Engineering. Driven by curiosity, I enjoy exploring how data,
-                algorithms, and intelligence come together to solve real-world
-                problems. I’m passionate about understanding the stories hidden
-                within data and transforming raw information into meaningful
-                insights through AI and ML.
-              </p>
-
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground/80">
-                Beyond technical skills, I bring strong enthusiasm for
-                problem-solving and continuous learning across AI, Machine
-                Learning, Web Development, and Data. Whether it’s building
-                intelligent models, designing interactive web solutions, or
-                analyzing datasets, I see every challenge as a puzzle and enjoy
-                uncovering the pieces that create meaningful impact.
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Combining Artificial Intelligence, Machine Learning, Data Science
+                and Software Development to create impactful solutions that solve
+                real-world problems.
               </p>
             </div>
 
-            {/* INTERESTS */}
-            <div className="opacity-0 animate-fade-in-up space-y-4">
-              <h3 className="font-serif text-[26px] sm:text-[28px] font-medium tracking-tight text-foreground">
-                What I'm Interested In
-              </h3>
+            <div className="card-elevated p-8 md:p-10 mb-24">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-8">
+                My Journey
+              </h2>
 
-              <div className="w-8 h-[1.5px] bg-primary/80 mx-auto" />
-
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground/90">
-                My interests span data visualization, data cleaning,
-                machine learning–based prediction, website development, and AI
-                prompting. I enjoy transforming raw, unstructured data into
-                clean insights, building predictive models, and presenting
-                results through intuitive dashboards and data-driven web
-                applications enhanced with AI.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5">
+                What started as curiosity about data and technology evolved into a
+                passion for Artificial Intelligence, Machine Learning and software development.
               </p>
 
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground/80">
-                I’m passionate about learning cloud technologies and data
-                structures, strengthening my foundation in scalable systems and
-                efficient problem-solving.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5">
+                Through projects in healthcare, agriculture and intelligent systems,
+                I discovered how technology can create meaningful impact when applied
+                to real-world challenges.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Today, I focus on building AI-powered solutions, learning continuously
+                and sharing knowledge with the tech community.
               </p>
             </div>
 
-            {/* THINKING */}
-            <div className="opacity-0 animate-fade-in-up space-y-4">
-              <h3 className="font-serif text-[26px] sm:text-[28px] font-medium tracking-tight text-foreground">
-                How I Think & Approach Problems
-              </h3>
+            <div className="mb-24">
+              <h2 className="font-serif text-4xl font-bold text-center mb-4">
+                Beyond The Screen
+              </h2>
 
-              <div className="w-8 h-[1.5px] bg-primary/80 mx-auto" />
-
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground/90">
-                I believe in starting with "why" before diving into "how."
-                Understanding the context and end goals helps me focus on what
-                truly matters rather than getting lost in data for data's sake.
-                I approach each project with structured curiosity—asking the
-                right questions, validating assumptions, and iterating toward
-                clarity.
+              <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+                Technology is only one part of my journey. I enjoy speaking,
+                mentoring, building products and engaging with communities.
               </p>
 
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground/80">
-                My methodology is simple: listen carefully, analyze thoroughly,
-                and communicate clearly. I'm not just looking to find answers—
-                I'm looking to find the right answers that drive action.
-              </p>
+              <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                <div className="group card-elevated overflow-hidden rounded-2xl hover:-translate-y-2 transition-all duration-300">
+                  <img
+                    src={SpeakerEventImg}
+                    alt="Technical Speaker"
+                    className="w-full h-[240px] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="p-5">
+                    <h3 className="font-semibold text-lg mb-2">🎤 Technical Speaker</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Presenting AI, React and emerging technologies through technical events.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="group card-elevated overflow-hidden rounded-2xl hover:-translate-y-2 transition-all duration-300">
+                  <img
+                    src={TeachingImg}
+                    alt="Mentor"
+                    className="w-full h-[240px] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="p-5">
+                    <h3 className="font-semibold text-lg mb-2">👩‍🏫 Mentor & Educator</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Helping students learn programming, AI and problem-solving.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="group card-elevated overflow-hidden rounded-2xl hover:-translate-y-2 transition-all duration-300">
+                  <img
+                    src={CodingImg}
+                    alt="Developer"
+                    className="w-full h-[240px] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="p-5">
+                    <h3 className="font-semibold text-lg mb-2">💻 Developer & Builder</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Turning ideas into products using AI, Data Science and Full Stack Development.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="group card-elevated overflow-hidden rounded-2xl hover:-translate-y-2 transition-all duration-300">
+                  <img
+                    src={TeachinggImg}
+                    alt="Community Leadership"
+                    className="w-full h-[240px] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="p-5">
+                    <h3 className="font-semibold text-lg mb-2">🚀 Community Leadership</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Building connections, sharing knowledge and contributing to communities.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
-            {/* MOTIVATION */}
-            <div className="opacity-0 animate-fade-in-up space-y-4">
-              <h3 className="font-serif text-[26px] sm:text-[28px] font-medium tracking-tight text-foreground">
-                What Motivates Me
-              </h3>
+            <div className="mb-24">
+              <h2 className="font-serif text-4xl font-bold text-center mb-12">
+                Journey Timeline
+              </h2>
 
-              <div className="w-8 h-[1.5px] bg-primary/80 mx-auto" />
+              <div className="space-y-6">
+                {timeline.map((item) => (
+                  <div key={item.year} className="card-elevated p-6 flex flex-col md:flex-row gap-6">
+                    <div className="text-3xl font-bold gradient-text min-w-[100px]">
+                      {item.year}
+                    </div>
 
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground/90">
-                What drives me to learn machine learning, data, AI prompting, and
-                web development is the moment when complexity turns into
-                clarity. I enjoy uncovering patterns, building predictive
-                intelligence, and then bringing those insights to life through
-                websites people can actually interact with.
-              </p>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mb-24">
 
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground/80">
-                I'm motivated by growth—both personal and professional. Every
-                challenge is an opportunity to learn something new, and I
-                actively seek out projects that push me beyond my comfort zone.
-              </p>
+  <h2 className="font-serif text-4xl font-bold text-center mb-12">
+    Why Work With Me
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-6">
+
+    <div className="card-elevated p-6">
+      <h3 className="font-semibold text-xl mb-3">
+        🚀 Fast Learner
+      </h3>
+
+      <p className="text-muted-foreground">
+        I quickly adapt to new technologies, frameworks and tools,
+        allowing me to contribute effectively in dynamic environments.
+      </p>
+    </div>
+
+    <div className="card-elevated p-6">
+      <h3 className="font-semibold text-xl mb-3">
+        🧠 Problem Solver
+      </h3>
+
+      <p className="text-muted-foreground">
+        I enjoy breaking complex challenges into manageable solutions
+        using data, logic and creativity.
+      </p>
+    </div>
+
+    <div className="card-elevated p-6">
+      <h3 className="font-semibold text-xl mb-3">
+        🤝 Team Player
+      </h3>
+
+      <p className="text-muted-foreground">
+        Through internships, community events and mentoring activities,
+        I have developed strong collaboration and communication skills.
+      </p>
+    </div>
+
+    <div className="card-elevated p-6">
+      <h3 className="font-semibold text-xl mb-3">
+        💡 Impact Driven
+      </h3>
+
+      <p className="text-muted-foreground">
+        Whether building AI solutions for healthcare or agriculture,
+        I focus on creating technology that delivers real-world value.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+            <div className="text-center py-16">
+              <blockquote className="font-serif text-2xl md:text-4xl italic max-w-4xl mx-auto leading-relaxed">
+                "The best solutions emerge when data, intelligence and human creativity work together."
+              </blockquote>
             </div>
 
-            {/* SOCIAL */}
-            <div className="pt-10 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-4 font-medium">
-                Connect with me
+            <div className="border-t border-border pt-12 text-center">
+              <h3 className="font-serif text-2xl font-bold mb-4">
+                Let's Connect
+              </h3>
+
+              <p className="text-muted-foreground mb-6">
+                Open to opportunities, collaborations and innovative ideas.
               </p>
+
               <div className="flex justify-center">
-                <SocialLinks size="md" />
+                <SocialLinks size="lg" />
               </div>
             </div>
 
@@ -134,6 +256,4 @@ const About = () => {
       </section>
     </PageWrapper>
   );
-};
-
-export default About;
+}
