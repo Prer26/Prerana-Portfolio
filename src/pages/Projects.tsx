@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, Github } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 import { PageWrapper } from "@/components/PageWrapper";
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -34,7 +34,7 @@ const projects = [
       "Interactive Power BI dashboard analysing product performance and customer demand patterns.",
     image: "/projects/dashboards/blinkitt.jpg",
     tags: ["Power BI", "DAX", "Data Visualization"],
-    github: "https://github.com/yourusername/blinkit-dashboard",
+    
   },
   {
     category: "Dashboards",
@@ -43,7 +43,7 @@ const projects = [
       "Analysed employee performance, attrition, and workforce trends using interactive KPIs and drill-through insights.",
     image: "/projects/dashboards/hrr.png",
     tags: ["Power BI", "HR Analytics"],
-    github: "https://github.com/yourusername/hr-sales-analysis",
+    link: "https://github.com/Prer26/HR-ANALYSIS-DASHBOARD",
   },
   {
     category: "Dashboards",
@@ -52,7 +52,7 @@ const projects = [
       "Studied EV sales and adoption trends to identify regions driving electric vehicle demand.",
     image: "/projects/dashboards/ev_vehicle.jpg",
     tags: ["Tableau", "Sales Analytics"],
-    github: "https://github.com/yourusername/ev-sales",
+    link: "https://github.com/Prer26/Electric-Vehicles-Data-Analysis",
   },
   {
     category: "Dashboards",
@@ -61,7 +61,7 @@ const projects = [
       "Interactive dashboard visualizing sales performance metrics and KPIs.",
     image: "/projects/dashboards/excel.jpg",
     tags: ["Excel", "Sales Analytics", "Pivot Tables"],
-    github: "https://github.com/yourusername/sales-dashboard",
+  
   },
   {
     category: "Dashboards",
@@ -69,7 +69,7 @@ const projects = [
     description: "Interactive dashboard analyzing crime patterns and safety metrics.",
     image: "/projects/dashboards/crimee.jpg",
     tags: ["Power BI", "Data Visualization"],
-    github: "https://github.com/yourusername/sales-dashboards"
+    link: "https://github.com/Prer26/Crime-Safety-Data-Analysis"
   },
   {
     category: "Dashboards",
@@ -77,7 +77,7 @@ const projects = [
     description: "Excel-based analytics dashboard built using Pivot Tables, Power Query, and advanced formulas to analyze Swiggy order trends, restaurant performance, delivery time, and revenue patterns for data-driven insights.",
     image: "/projects/dashboards/swiggy.png",
     tags: ["Excel", "Sales Analytics", "Pivot Tables"],
-    github: "https://github.com/yourusername/swiggy-dashboard",
+    link: "https://github.com/Prer26/Swiggy-Sales-data-analysis-dashboard",
   },
   {
     category: "Dashboards",
@@ -86,7 +86,7 @@ const projects = [
       "Interactive Power BI dashboard analyzing pizza sales performance, peak order hours, top categories, revenue trends, and customer purchase behavior using DAX measures and dynamic slicers.",
     image: "/projects/dashboards/pizza.png",
     tags: ["Power BI", "DAX", "Sales Analytics"],
-    github: "https://github.com/Prer26/Pizza-sales-data-analysis",
+    link: "https://github.com/Prer26/Pizza-sales-data-analysis",
   },
   {
     category: "Dashboards",
@@ -94,7 +94,7 @@ const projects = [
     description: "Power BI analytics dashboard studying screen time, platform usage, age-wise addiction patterns, productivity impact, and mental health indicators with interactive KPIs and drill-through insights.",
     image: "/projects/dashboards/social media.png",
     tags: ["Power BI", "Data Visualization"],
-    github: "https://github.com/Prer26/Social-Media-Addiction-Analysis",
+    link: "https://github.com/Prer26/Social-Media-Addiction-Analysis",
   },
   {
     category: "Dashboards",
@@ -102,7 +102,7 @@ const projects = [
     description: "Power BI dashboard analyzing crop yields, weather patterns, soil health, and market trends to provide actionable insights for farmers and agribusinesses.",
     image: "/projects/dashboards/agri.png",
     tags: ["Power BI", "Data Visualization"],
-    github: "https://github.com/Prer26/Agri-Insights-Dashboard",
+    link: "https://github.com/Prer26/Agri-Insights-Dashboard",
   },
   {
     category: "Dashboards",
@@ -110,7 +110,7 @@ const projects = [
     description: "Power BI dashboard analyzing SuperStore sales performance, customer segments, product categories, and regional trends using DAX measures and interactive visuals.",
     image: "/projects/dashboards/superstore.png",
     tags: ["Power BI", "DAX", "Sales Analytics"],
-    github: "https://github.com/yourusername/superstore-powerbi",
+    link: "https://github.com/Prer26/Super-Store-Dashboard",
   },
 
   // ML
@@ -122,7 +122,7 @@ const projects = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsIk_FjS-23wqiKHH0-eQLl79Y_Vr9h_n8AQ&s",
     tags: ["Deep Learning", "CNN", "TensorFlow"],
-    github: "https://github.com/yourusername/blood-cancer-cnn",
+    link: "https://github.com/yourusername/blood-cancer-cnn",
   },
 
   // WEB
@@ -133,7 +133,7 @@ const projects = [
       "Full-stack MERN platform designed for sustainable farming and farmer resources.",
     image: "/projects/web/nishkaam.png",
     tags: ["MERN", "MongoDB", "React"],
-    github: "https://github.com/Prer26/nishkaam-krishi-ai",
+    link: "https://github.com/Prer26/nishkaam-krishi-ai",
   },
   {
     category: "Web",
@@ -142,7 +142,7 @@ const projects = [
       "Responsive website designed for catering services with clean UI and layout.",
     image: "/projects/web/shree.png",
     tags: ["Web Development", "UI/UX"],
-    github: "https://github.com/yourusername/catering-website",
+    link: "https://shreeprakarm-z828.vercel.app",
   },
   {
     category: "Web",
@@ -151,7 +151,7 @@ const projects = [
       "AI-powered web app built with React and Flask that checks for drug interactions and provides safety information to users.",
     image: "/projects/web/Pharmaguard.png",
     tags: ["Web Development", "React", "AI"],
-    github: "https://github.com/Prer26/PharmaGuard-AI"
+    link: "https://pharmaguard-frontend-eta.vercel.app"
   },
   {
     category: "Web",
@@ -160,7 +160,7 @@ const projects = [
       "AI-powered travel planning web app built with React and Node.js that generates personalized itineraries based on user preferences and destination insights.",
     image: "/projects/web/Travel.png",
     tags: ["Web Development", "React", "AI"],
-    github: "https://github.com/Prer26/TravelMateAI"
+    link: "https://travel-mate-ai-frontend.vercel.app"
   },
 {
     category: "Web",
@@ -169,7 +169,7 @@ const projects = [
       "AI-powered legal assistant web app built with React and Flask that provides legal information, case summaries, and document analysis for users.",
     image: "/projects/web/nyayastra.png",
     tags: ["Web Development", "React", "AI"],
-    github: "https://github.com/Prer26/Nyayastra-Frontend"
+    link: "https://nyayastra-frontend.prerushaiyengar2620041984.workers.dev"
   },
   // CANVA  
   {
@@ -297,16 +297,20 @@ const Projects = () => {
                     </div>
                   )}
 
-                  {project.github && (
+                  {project.link && (project.category === "Dashboards" || project.category === "Web") && (
                     <a
-                      href={project.github}
+                      href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition"
                     >
-                      <Github size={16} />
-                      View on GitHub
+                      <ExternalLink size={16} />
+                      {project.category === "Dashboards"
+                        ? "View Dashboard"
+                        : project.link.includes("github.com")
+                        ? "View on GitHub"
+                        : "Live Demo"}
                     </a>
                   )}
                 </div>
